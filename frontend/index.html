@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Stage Detector</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fruit Stage Detector</h1>
+            <p>Smart Fruit Ripeness Analyzer</p>
+        </header>
+        
+        <main class="content">
+            <!-- Camera Section -->
+            <div class="camera-section">
+                <div class="scanner-container">
+                    <div class="scanner-ring"></div>
+                    <video id="webcam" autoplay playsinline muted></video>
+                    <img id="upload-preview" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:20px;" alt="Uploaded fruit" />
+                    <canvas id="canvas" style="display: none;"></canvas>
+                </div>
+                
+                <div class="controls">
+                    <button id="capture-btn" class="primary-btn">
+                        <span class="btn-text">Capture & Analyze</span>
+                        <div class="spinner" style="display:none;"></div>
+                    </button>
+                    <button id="camera-toggle-btn" class="camera-toggle-btn">
+                        📷 Turn Off Camera
+                    </button>
+                    <!-- Upload Photo Option -->
+                    <div class="upload-divider"><span>or</span></div>
+                    <label for="photo-upload" class="upload-btn">
+                        📁 Upload a Photo
+                    </label>
+                    <input type="file" id="photo-upload" accept="image/*" style="display:none;">
+
+                    <div class="toggle-container">
+                        <label class="switch">
+                            <input type="checkbox" id="auto-capture-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">Auto-Scan (Every 5s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section glass-panel">
+                <h2>Analysis Results</h2>
+                
+                <div id="loading-state" class="state-panel hidden">
+                    <div class="scanner-line-animation"></div>
+                    <p>Analyzing with Gemini AI...</p>
+                </div>
+                
+                <div id="error-state" class="state-panel hidden">
+                    <p id="error-message">Failed to analyze image.</p>
+                </div>
+
+                <div id="results-data" class="data-panel">
+                    <div class="result-card primary-card">
+                        <span class="label">Detected Fruit</span>
+                        <h3 id="res-fruit">--</h3>
+                    </div>
+                    
+                    <div class="result-card">
+                        <span class="label">Stage</span>
+                        <h3 id="res-stage" style="font-size: 1.4rem;">--</h3>
+                    </div>
+                    
+                    <div class="result-grid">
+                        <div class="result-card">
+                            <span class="label">Condition</span>
+                            <p id="res-condition">--</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="label">Confidence</span>
+                            <p id="res-confidence">--%</p>
+                        </div>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <span class="label">Suggestion</span>
+                        <p id="res-suggestion">Point the camera at any fruit and click capture.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

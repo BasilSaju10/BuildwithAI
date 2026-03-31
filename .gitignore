@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+backend/__pycache__/
+.venv/
+env/
+venv/
+ENV/
+
+# Environment Variables (CRITICAL)
+.env
+
+# OS Files
+.DS_Store
+Thumbs.db
