@@ -23,14 +23,15 @@ The application utilizes Gemini's **Multimodal (Vision)** capabilities. When a u
 ## Proof of Google AI Usage
 The application successfully integrates with Gemini API to provide real-time analysis.
 
-![AI Proof](proof/screenshot1.png)
+![AI Proof](proof/geminiapi.png)
 
 ## Screenshots
 ### Main Interface
-![App Screenshot](screenshots/screenshot1.png)
+![App Screenshot 1](screenshots/1.png)
+![App Screenshot 2](screenshots/2.png)
 
 ## Demo Video
-[Watch Demo](https://github.com/BasilSaju10/Fruit-Stage-Detector) *(Placeholder: Add your screen recording link here)*
+[Watch Demo](https://drive.google.com/drive/folders/1KqH2kxTLa_ms7Q-POEmgtRplkKxxsSku)
 
 ## Installation Steps
 
