@@ -23,7 +23,7 @@ The application utilizes Gemini's **Multimodal (Vision)** capabilities. When a u
 ## Proof of Google AI Usage
 The application successfully integrates with Gemini API to provide real-time analysis.
 
-![AI Proof](proof/geminiapi.png)
+![AI Proof](proof/image.png)
 
 ## Screenshots
 ### Main Interface
