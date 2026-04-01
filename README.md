@@ -27,8 +27,8 @@ The application successfully integrates with Gemini API to provide real-time ana
 
 ## Screenshots
 ### Main Interface
-![App Screenshot 1](screenshots/1.png)
-![App Screenshot 2](screenshots/2.png)
+![App Screenshot 1](1.png)
+![App Screenshot 2](2.png)
 
 ## Demo Video
 [Watch Demo](https://drive.google.com/drive/folders/1KqH2kxTLa_ms7Q-POEmgtRplkKxxsSku)
